@@ -4,3 +4,16 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+nostr-sdk = { git = "https://github.com/rust-nostr/nostr", features = [
+	"lmdb",
+	"nip96",
+	"nip59",
+	"nip49",
+	"nip44",
+] }
+nostr-connect = { git = "https://github.com/rust-nostr/nostr" }
+tokio = { version = "1.45.1", features = ["full"] }
+anyhow = "1.0.44"
+log = "0.4"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["fmt"] }
